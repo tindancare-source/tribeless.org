@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Tribeless GH Heritage LBG</title>
+  <meta name="description" content="Learn about Tribeless GH Heritage LBG, our founders, mission, and strategic objectives for building resilient communities in Ghana and Africa." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    .mission-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .mission-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px 24px;
+      box-shadow: var(--shadow);
+      position: relative; overflow: hidden;
+    }
+    .mission-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+    .mission-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem; font-weight: 700;
+      color: rgba(30,107,58,.12); line-height: 1;
+      margin-bottom: 8px;
+    }
+    .mission-card h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--primary); }
+    .mission-card p  { color: var(--mid); font-size: .88rem; }
+
+    .values-list {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 20px; margin-top: 40px;
+    }
+    .value-item {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+    }
+    .value-item .v-icon { font-size: 2rem; margin-bottom: 10px; }
+    .value-item h4 { font-size: .98rem; color: var(--primary); }
+
+    .founder-bio {
+      display: grid; grid-template-columns: 320px 1fr; gap: 50px; align-items: start;
+      margin-bottom: 70px;
+    }
+    .founder-bio.reverse { grid-template-columns: 1fr 320px; }
+    .founder-bio.reverse .founder-img-col { order: 2; }
+    .founder-bio.reverse .founder-text-col { order: 1; }
+    .founder-img {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 100%; height: 420px; object-fit: cover; object-position: top;
+    }
+    .founder-img-col { position: relative; }
+    .founder-badge {
+      position: absolute; bottom: -14px; left: 20px;
+      background: var(--primary); color: var(--white);
+      padding: 10px 18px; border-radius: var(--radius);
+      font-size: .85rem; font-weight: 600;
+      box-shadow: 0 6px 18px rgba(30,107,58,.35);
+    }
+    .founder-text-col h2 { font-size: 1.9rem; margin-bottom: 4px; }
+    .founder-text-col .role { color: var(--primary); font-weight: 600; font-size: .95rem; margin-bottom: 20px; display: block; }
+    .founder-text-col p { color: var(--mid); font-size: .95rem; margin-bottom: 14px; }
+
+    @media (max-width: 800px) {
+      .founder-bio, .founder-bio.reverse { grid-template-columns: 1fr; }
+      .founder-bio.reverse .founder-img-col,
+      .founder-bio.reverse .founder-text-col { order: unset; }
+      .founder-img { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─────────────────────────────── -->
+<nav class="navbar scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=80&h=80&fit=crop&crop=center&q=80" alt="Tribeless GH Logo" />
+      <div class="nav-logo-text">
+        <strong>Tribeless GH Heritage</strong>
+        <span>LBG · Building Resilient Communities</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="initiatives.html">Initiatives</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-donate-btn"><a href="#" data-donate class="btn btn-donate">❤ Donate</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─────────────────────────────── -->
+<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&q=80');background-size:cover;background-position:center;position:relative;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,71,42,.88),rgba(18,25,43,.75));"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="breadcrumb"><a href="index.html">Home</a> › About Us</div>
+    <h1>About Tribeless GH Heritage</h1>
+    <p>Our mission, vision, values, and the passionate leaders behind Ghana's community development movement.</p>
+  </div>
+</div>
+
+<!-- ─── MISSION & VISION ─────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <span class="section-badge">Our Mission</span>
+        <h2 class="section-title">Main Objective</h2>
+        <p class="section-sub">
+          To advance holistic and inclusive community development by delivering culturally relevant and traditionally appropriate programmes that expand access to quality health services — particularly maternal and mental health — strengthen education and values-based learning, promote inclusive economic growth through skills development and sustainable livelihoods, and support partners to mobilise resources for lasting social impact.
+        </p>
+      </div>
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=640&q=80&fit=crop"
+             alt="Community gathering" style="width:100%;height:380px;object-fit:cover;border-radius:10px;" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── STRATEGIC OBJECTIVES ─────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-badge">Strategic Focus</span>
+      <h2 class="section-title">Our Four Strategic Objectives</h2>
+      <p class="section-sub">Four pillars guiding every programme, partnership, and investment we make.</p>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <div class="mission-num">01</div>
+        <h3>Health &amp; Wellbeing</h3>
+        <p>Expand equitable access to quality and inclusive health services, with a focus on maternal and mental health, through culturally appropriate, community-based and digital interventions.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-num">02</div>
+        <h3>Education &amp; Values-Based Learning</h3>
+        <p>Strengthen education and values-based learning by promoting culturally grounded curricula, life-skills development, and positive social and moral values among children, youth, and families.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-num">03</div>
+        <h3>Economic Empowerment &amp; Livelihoods</h3>
+        <p>Promote inclusive economic growth by equipping vulnerable populations with market-relevant skills, entrepreneurship support, and sustainable livelihood opportunities that enhance resilience and self-reliance.</p>
+      </div>
+      <div class="mission-card">
+        <div class="mission-num">04</div>
+        <h3>Partnerships &amp; Sustainability</h3>
+        <p>Strengthen institutional partnerships and community systems to mobilise resources, build local capacity, and ensure the sustainability and scale-up of social impact initiatives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUR VALUES ───────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-badge">Core Values</span>
+      <h2 class="section-title">What We Stand For</h2>
+    </div>
+    <div class="values-list">
+      <div class="value-item"><div class="v-icon">🤝</div><h4>Community First</h4></div>
+      <div class="value-item"><div class="v-icon">⚖️</div><h4>Inclusion &amp; Equity</h4></div>
+      <div class="value-item"><div class="v-icon">💚</div><h4>Compassion</h4></div>
+      <div class="value-item"><div class="v-icon">🌱</div><h4>Sustainability</h4></div>
+      <div class="value-item"><div class="v-icon">🔬</div><h4>Innovation</h4></div>
+      <div class="value-item"><div class="v-icon">🛡️</div><h4>Integrity</h4></div>
+      <div class="value-item"><div class="v-icon">💪</div><h4>Resilience</h4></div>
+      <div class="value-item"><div class="v-icon">🌍</div><h4>Pan-African Vision</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LEADERSHIP ───────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:60px;">
+      <span class="section-badge">Our Founders</span>
+      <h2 class="section-title">Leadership Profiles</h2>
+      <p class="section-sub">Two women whose lived experience became the foundation of a movement.</p>
+    </div>
+
+    <!-- Founder -->
+    <div class="founder-bio">
+      <div class="founder-img-col">
+        <img class="founder-img"
+             src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=640&q=80&fit=crop&crop=top"
+             alt="Mary Edem Ayensua — Founder & Executive Director" />
+        <div class="founder-badge">Founder &amp; Executive Director</div>
+      </div>
+      <div class="founder-text-col">
+        <h2>Mary Edem Ayensua</h2>
+        <span class="role">Founder &amp; Executive Director · Tribeless GH Heritage LBG</span>
+        <p>Mary Edem Ayensua is the Founder and Executive Director of Tribeless GH Heritage LBG, a Ghana-based non-profit organisation focused on building healthy and self-reliant communities. She has over 20 years of experience in executive administration, institutional coordination, and project management.</p>
+        <p>She previously worked with USAID Ghana supporting the Mission Director's Office, where she coordinated high-level government and development partner engagements across sectors including health, education, governance, and economic growth. She has also worked with the Volta River Authority and in the private sector.</p>
+        <p>She holds a Master's degree in Project Management from the Open University of Malaysia and a Bachelor's degree in Business Administration from Ghana Technology University. She leads programmes in mental health, education, youth empowerment, and community development, while supporting partnerships and resource mobilisation for social impact initiatives.</p>
+        <ul class="about-features">
+          <li><span class="icon">✓</span><span>20+ years in executive administration &amp; project management</span></li>
+          <li><span class="icon">✓</span><span>Formerly USAID Ghana · Mission Director's Office</span></li>
+          <li><span class="icon">✓</span><span>MSc Project Management · Open University Malaysia</span></li>
+          <li><span class="icon">✓</span><span>BSc Business Administration · Ghana Technology University</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Co-Founder -->
+    <div class="founder-bio reverse">
+      <div class="founder-img-col">
+        <img class="founder-img"
+             src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=640&q=80&fit=crop&crop=top"
+             alt="Madam Mercy Opare — Co-Founder" />
+        <div class="founder-badge">Co-Founder</div>
+      </div>
+      <div class="founder-text-col">
+        <h2>Madam Mercy Opare</h2>
+        <span class="role">Co-Founder · Tribeless GH Heritage LBG</span>
+        <p>Madam Mercy Opare is a respected community figure, retired trader, and Co-Founder of Tribeless GH Heritage LBG. Her life journey reflects resilience, service, and a deep commitment to family and community development.</p>
+        <p>In the early 1980s, Madam Opare worked with the Cocoa Research Institute of Ghana (formerly the West Africa Cocoa Research Institute) as a Seeds Nursing and Replanting Officer, supporting cocoa seedling development and replanting programmes that contributed to Ghana's agricultural sector.</p>
+        <p>After leaving formal employment, she became a trader and entrepreneur, building a livelihood through small-scale commerce while raising her family. Through discipline and perseverance, she single-handedly raised six children, all of whom went on to pursue higher education and professional careers. She has also ensured that her children and grandchildren receive formal education, a legacy she considers her greatest contribution to her family and to future generations.</p>
+        <p>Madam Opare has been actively involved in faith and community service, serving in various roles within her church and supporting community initiatives and women's activities.</p>
+        <p>In the 1990s, she served as an organiser for the <em>"Wo Pue a Mɛ Pue"</em> Women's Association, a local association for women in trade that supported grassroots mobilisation and women's empowerment to improve the wellbeing of families and communities.</p>
+        <p>Although Madam Opare did not have the opportunity to pursue formal education herself, her life experience, practical wisdom, and deep understanding of community realities make her an invaluable resource for Tribeless GH Heritage. Her life story embodies the values Tribeless promotes — resilience, dignity, hard work, and community responsibility. She continues to inspire women and young people, demonstrating that leadership and impact are not defined by formal qualifications alone, but by courage, integrity, and commitment to uplifting others.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DONATE CTA ────────────────────────────── -->
+<section class="donate-section">
+  <div class="container">
+    <h2>Join Our Mission</h2>
+    <p>Together, we can build communities where every individual has access to opportunity, support, and dignity.</p>
+    <a href="#" data-donate class="btn btn-donate" style="font-size:1.1rem;padding:16px 40px;">❤ Donate Today</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=60&h=60&fit=crop&crop=center&q=80" alt="Logo" style="height:38px;width:38px;border-radius:6px;" />
+          <div class="nav-logo-text"><strong>Tribeless GH Heritage</strong><span>LBG</span></div>
+        </a>
+        <p>Building healthy, resilient, and self-reliant communities across Ghana and Africa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="story.html">Founder's Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Initiatives</h4>
+        <ul class="footer-links">
+          <li><a href="initiatives.html#mindnest">Beyond the Blanket</a></li>
+          <li><a href="initiatives.html#hari">HARI</a></li>
+          <li><a href="initiatives.html#books">Books Reborn</a></li>
+          <li><a href="initiatives.html#livejourney">Live Journey</a></li>
+          <li><a href="initiatives.html#safepassage">Safe Passage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:0276060260">0276 060 260</a></li>
+          <li><a href="tel:0552081911">0552 081 911</a></li>
+          <li><a href="mailto:info@tribelessgh.org">info@tribelessgh.org</a></li>
+          <li><a href="#">Torgbor Close, Kanda</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tribeless GH Heritage LBG. All rights reserved.</span>
+      <span>Tribeless Home, Torgbor Close, Kanda · GA041-9996</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── FLOATING DONATE ───────────────────────── -->
+<div class="floating-donate">
+  <span class="floating-donate-label">Support Our Mission</span>
+  <a href="#" data-donate class="floating-donate-btn">❤ Donate</a>
+</div>
+
+<!-- ─── DONATE MODAL ──────────────────────────── -->
+<div class="modal-overlay" id="donateOverlay">
+  <div class="modal" id="donateModal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h2>Make a Donation</h2>
+    <p>Support Tribeless GH Heritage LBG in building healthy, self-reliant communities across Ghana.</p>
+    <form id="donateForm">
+      <div class="donate-amounts" style="margin-bottom:20px;">
+        <button type="button" class="donate-amt" data-amount="20">GHS 20</button>
+        <button type="button" class="donate-amt active" data-amount="50">GHS 50</button>
+        <button type="button" class="donate-amt" data-amount="100">GHS 100</button>
+        <button type="button" class="donate-amt" data-amount="250">GHS 250</button>
+      </div>
+      <div class="form-group">
+        <label>Amount (GHS)</label>
+        <input type="number" value="50" min="1" required />
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" required /></div>
+        <div class="form-group"><label>Last Name</label><input type="text" required /></div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" required />
+      </div>
+      <div class="form-group">
+        <label>Dedicated to</label>
+        <select>
+          <option>General Fund</option>
+          <option>Beyond the Blanket / MindNest</option>
+          <option>Hospital Assets Recovery (HARI)</option>
+          <option>Books Reborn</option>
+          <option>Live Journey Initiative</option>
+          <option>Safe Passage to School</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-donate" style="width:100%;border-radius:8px;">❤ Complete Donation</button>
+      <p style="text-align:center;font-size:.78rem;color:#888;margin-top:12px;">🔒 Secure &amp; Encrypted</p>
+    </form>
+  </div>
+</div>
+
+<div class="notification"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

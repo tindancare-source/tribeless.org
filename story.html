@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder's Story — Tribeless GH Heritage LBG</title>
+  <meta name="description" content="The personal story behind Tribeless GH Heritage LBG — from a village in Ghana's Eastern Region to a movement for community transformation." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    .story-chapters { padding: 70px 0; }
+    .chapter {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      margin-bottom: 80px;
+    }
+    .chapter:nth-child(even) .chapter-img { order: 2; }
+    .chapter:nth-child(even) .chapter-text { order: 1; }
+    .chapter-img img {
+      width: 100%; height: 380px; object-fit: cover;
+      border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .chapter-num {
+      font-family: 'Playfair Display', serif;
+      font-size: .82rem; font-weight: 700;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 10px;
+    }
+    .chapter-text h2 { font-size: clamp(1.5rem,3vw,2rem); margin-bottom: 16px; }
+    .chapter-text p  { color: var(--mid); margin-bottom: 14px; font-size: .97rem; }
+    .chapter-text blockquote {
+      border-left: 4px solid var(--primary);
+      padding: 14px 20px;
+      background: rgba(30,107,58,.06);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--primary);
+      margin: 20px 0;
+      font-size: .97rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary), var(--accent));
+      border-radius: 3px;
+    }
+    .tl-item {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: calc(50% + 40px);
+      margin-bottom: 48px;
+      position: relative;
+    }
+    .tl-item:nth-child(even) {
+      justify-content: flex-start;
+      padding-right: 0;
+      padding-left: calc(50% + 40px);
+    }
+    .tl-dot {
+      position: absolute;
+      left: 50%; transform: translateX(-50%);
+      top: 20px;
+      width: 16px; height: 16px;
+      background: var(--primary);
+      border-radius: 50%;
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 3px var(--primary);
+    }
+    .tl-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      max-width: 420px;
+    }
+    .tl-year {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .tl-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .tl-card p  { color: var(--mid); font-size: .88rem; }
+
+    .initiatives-born {
+      background: var(--dark); color: var(--white); padding: 80px 0;
+    }
+    .initiatives-born .section-badge { background: rgba(245,166,35,.15); color: var(--accent); }
+    .initiatives-born .section-title { color: var(--white); }
+    .init-origin-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 24px; margin-top: 48px;
+    }
+    .init-origin-card {
+      background: rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      padding: 26px;
+      border: 1px solid rgba(255,255,255,.1);
+      transition: background var(--transition);
+    }
+    .init-origin-card:hover { background: rgba(255,255,255,.1); }
+    .io-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .init-origin-card h3 { color: var(--accent); font-size: 1rem; margin-bottom: 8px; }
+    .init-origin-card p  { color: rgba(255,255,255,.7); font-size: .88rem; }
+
+    @media (max-width: 800px) {
+      .chapter, .chapter:nth-child(even) .chapter-img,
+      .chapter:nth-child(even) .chapter-text { grid-template-columns: 1fr; }
+      .chapter:nth-child(even) .chapter-img,
+      .chapter:nth-child(even) .chapter-text { order: unset; }
+      .chapter-img img { height: 240px; }
+      .timeline::before { left: 20px; }
+      .tl-item, .tl-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 56px; padding-right: 0;
+      }
+      .tl-dot { left: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─────────────────────────────── -->
+<nav class="navbar scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=80&h=80&fit=crop&crop=center&q=80" alt="Logo" />
+      <div class="nav-logo-text">
+        <strong>Tribeless GH Heritage</strong>
+        <span>LBG · Building Resilient Communities</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="initiatives.html">Initiatives</a></li>
+      <li><a href="story.html" class="active">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-donate-btn"><a href="#" data-donate class="btn btn-donate">❤ Donate</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─────────────────────────────── -->
+<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&q=80');background-size:cover;background-position:center;position:relative;padding-bottom:90px;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,71,42,.9),rgba(18,25,43,.8));"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Founder's Story</div>
+    <h1>The Story Behind Tribeless</h1>
+    <p style="max-width:640px;margin:0 auto;">From a village in Ghana's Eastern Region to a movement for community transformation — the journey of Mary Edem Ayensua.</p>
+  </div>
+</div>
+
+<!-- ─── STORY CHAPTERS ───────────────────────── -->
+<div class="story-chapters">
+  <div class="container">
+
+    <div class="chapter">
+      <div class="chapter-img">
+        <img src="https://images.unsplash.com/photo-1568092690430-da2dfee6cb97?w=700&q=80&fit=crop"
+             alt="Village children walking to school in rural Ghana" />
+      </div>
+      <div class="chapter-text">
+        <div class="chapter-num">Chapter 1</div>
+        <h2>Growing Up in Bonkame</h2>
+        <p>Mary Edem Ayensua's journey toward founding Tribeless GH Heritage began long before the organisation itself existed. It began in a small village called Bonkame in Ghana's Eastern Region, where she spent her childhood.</p>
+        <p>Growing up in Bonkame meant learning early that opportunity was not always evenly distributed. Like many children in rural communities, Edem and her classmates walked several miles each day to and from school.</p>
+        <p>Textbooks were considered a luxury. In many classrooms, the few books available were given to teachers, and students had to sit in groups hoping for a chance to read from them. Children from wealthier families could travel to Koforidua to purchase textbooks — for the rest, obtaining one often required doing small jobs to raise money.</p>
+        <blockquote>"Education challenges were only one part of the reality she witnessed growing up."</blockquote>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-img">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80&fit=crop"
+             alt="Mental health stigma and community support" />
+      </div>
+      <div class="chapter-text">
+        <div class="chapter-num">Chapter 2</div>
+        <h2>Witnessing Stigma &amp; Broken Systems</h2>
+        <p>In many communities, women who experienced antenatal or postpartum mental health difficulties were often misunderstood. Instead of receiving care, some mothers were labelled as witches or accused of spiritual wrongdoing.</p>
+        <p>Young people struggling with depression or emotional distress were often told their experiences were the result of curses or spiritual attacks. Access to professional mental health services was extremely limited, and stigma prevented many from seeking help even where services existed.</p>
+        <p>Edem also observed the difficult conditions many mothers faced when giving birth. In some health facilities, women and their newborns had to lie on the floor — not because beds shouldn't exist, but because hospital beds and essential equipment were broken and left unrepaired.</p>
+        <blockquote>"As a child, she often wondered why broken equipment could not simply be repaired and sent to facilities that needed it most."</blockquote>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-img">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80&fit=crop&crop=top"
+             alt="Mary Edem Ayensua - Founder of Tribeless GH Heritage" />
+      </div>
+      <div class="chapter-text">
+        <div class="chapter-num">Chapter 3</div>
+        <h2>A Personal Loss That Strengthened Purpose</h2>
+        <p>Years later, Edem experienced a deeply personal loss when she gave birth and lost her baby. During that difficult period, she understood firsthand how challenging it could be to seek mental health support.</p>
+        <p>Even knowing that help existed, she felt the hesitation and stigma that many people experience when considering walking into a mental health facility. That moment strengthened something that had already been growing inside her for years.</p>
+        <p>A determination to turn her life experiences into solutions that could help others — not through pity, but through practical, community-centred action that addressed the root causes she had witnessed since childhood.</p>
+        <blockquote>"Her pain became her purpose. Her experiences became the blueprint for Tribeless."</blockquote>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-img">
+        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=700&q=80&fit=crop"
+             alt="Community building and social impact" />
+      </div>
+      <div class="chapter-text">
+        <div class="chapter-num">Chapter 4</div>
+        <h2>Why "Tribeless"?</h2>
+        <p>The name Tribeless reflects Mary's core belief: that opportunity, compassion, and development should never be limited by tribe, status, or background.</p>
+        <p>In a country and continent where tribal identity can divide, Tribeless GH Heritage stands for a different vision — communities where every individual, regardless of their origins, has access to opportunity, support systems, and the tools needed to thrive.</p>
+        <p>The name is both a statement and an invitation — a call to move beyond the divisions that have long held communities back, and toward the collective strength that comes from inclusion, dignity, and shared humanity.</p>
+        <blockquote>"Communities where every individual has access to opportunity, support, and dignity — regardless of tribe, status, or circumstance."</blockquote>
+        <a href="about.html" class="btn btn-primary" style="margin-top:10px;">Meet the Founders</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ─── TIMELINE ─────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-badge">Journey</span>
+      <h2 class="section-title">Key Milestones</h2>
+    </div>
+    <div class="timeline" style="margin-top:50px;">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-year">Early Childhood</div>
+          <h3>Bonkame, Eastern Region</h3>
+          <p>Edem grows up witnessing unequal access to education, mental health stigma, and broken health systems in rural Ghana.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-year">Professional Career</div>
+          <h3>USAID Ghana &amp; Public Sector</h3>
+          <p>Over a decade supporting USAID Mission Director's Office, working across health, education, governance, and economic growth programmes.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-year">Personal Journey</div>
+          <h3>A Loss That Became a Mission</h3>
+          <p>A personal experience with grief and the challenge of accessing mental health support strengthens Edem's resolve to act.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-year">2020</div>
+          <h3>Tribeless GH Heritage Founded</h3>
+          <p>Tribeless GH Heritage LBG is established in Ghana, translating personal experience into community-driven programmes.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-year">Present</div>
+          <h3>Five Initiatives, Growing Impact</h3>
+          <p>Five active programmes reaching thousands across Ghana — with plans to expand across Africa.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INITIATIVES BORN ──────────────────────── -->
+<section class="initiatives-born">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-badge">From Experience to Action</span>
+      <h2 class="section-title">How Each Initiative Was Born</h2>
+    </div>
+    <div class="init-origin-grid">
+      <div class="init-origin-card">
+        <div class="io-icon">📚</div>
+        <h3>Books Reborn</h3>
+        <p>Born from Edem's childhood memory of sharing the few textbooks available in her classroom — and her belief that every child deserves their own book.</p>
+      </div>
+      <div class="init-origin-card">
+        <div class="io-icon">🧠</div>
+        <h3>Beyond the Blanket / MindNest</h3>
+        <p>Born from witnessing mothers labelled as witches for postpartum mental health struggles — and from Edem's own experience of seeking help after personal loss.</p>
+      </div>
+      <div class="init-origin-card">
+        <div class="io-icon">🏥</div>
+        <h3>HARI</h3>
+        <p>Born from the image of mothers and newborns lying on the floor of health facilities — because the hospital beds were broken and left unrepaired.</p>
+      </div>
+      <div class="init-origin-card">
+        <div class="io-icon">💼</div>
+        <h3>Skills &amp; Youth Empowerment</h3>
+        <p>Born from watching young people whose academic journeys ended too early — and Edem's wish that they had practical pathways to dignified livelihoods.</p>
+      </div>
+      <div class="init-origin-card">
+        <div class="io-icon">🚤</div>
+        <h3>Safe Passage to School</h3>
+        <p>Born from the reality that for many children, the journey to school is a daily risk — and that a simple life jacket can make all the difference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DONATE CTA ────────────────────────────── -->
+<section class="donate-section">
+  <div class="container">
+    <h2>Be Part of the Story</h2>
+    <p>Your donation helps Tribeless GH Heritage write the next chapter — one community at a time.</p>
+    <a href="#" data-donate class="btn btn-donate" style="font-size:1.1rem;padding:16px 40px;">❤ Donate &amp; Make a Difference</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=60&h=60&fit=crop&crop=center&q=80" alt="Logo" style="height:38px;width:38px;border-radius:6px;" />
+          <div class="nav-logo-text"><strong>Tribeless GH Heritage</strong><span>LBG</span></div>
+        </a>
+        <p>Building healthy, resilient, and self-reliant communities across Ghana and Africa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="story.html">Founder's Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Initiatives</h4>
+        <ul class="footer-links">
+          <li><a href="initiatives.html#mindnest">Beyond the Blanket</a></li>
+          <li><a href="initiatives.html#hari">HARI</a></li>
+          <li><a href="initiatives.html#books">Books Reborn</a></li>
+          <li><a href="initiatives.html#livejourney">Live Journey</a></li>
+          <li><a href="initiatives.html#safepassage">Safe Passage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:0276060260">0276 060 260</a></li>
+          <li><a href="tel:0552081911">0552 081 911</a></li>
+          <li><a href="mailto:info@tribelessgh.org">info@tribelessgh.org</a></li>
+          <li><a href="#">Torgbor Close, Kanda</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tribeless GH Heritage LBG. All rights reserved.</span>
+      <span>Tribeless Home, Torgbor Close, Kanda · GA041-9996</span>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-donate">
+  <span class="floating-donate-label">Support Our Mission</span>
+  <a href="#" data-donate class="floating-donate-btn">❤ Donate</a>
+</div>
+
+<div class="modal-overlay" id="donateOverlay">
+  <div class="modal" id="donateModal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h2>Make a Donation</h2>
+    <p>Support Tribeless GH Heritage LBG in building healthy, self-reliant communities across Ghana.</p>
+    <form id="donateForm">
+      <div class="donate-amounts" style="margin-bottom:20px;">
+        <button type="button" class="donate-amt" data-amount="20">GHS 20</button>
+        <button type="button" class="donate-amt active" data-amount="50">GHS 50</button>
+        <button type="button" class="donate-amt" data-amount="100">GHS 100</button>
+        <button type="button" class="donate-amt" data-amount="250">GHS 250</button>
+      </div>
+      <div class="form-group"><label>Amount (GHS)</label><input type="number" value="50" min="1" required /></div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" required /></div>
+        <div class="form-group"><label>Last Name</label><input type="text" required /></div>
+      </div>
+      <div class="form-group"><label>Email Address</label><input type="email" required /></div>
+      <div class="form-group">
+        <label>Dedicated to</label>
+        <select>
+          <option>General Fund</option>
+          <option>Beyond the Blanket / MindNest</option>
+          <option>Hospital Assets Recovery (HARI)</option>
+          <option>Books Reborn</option>
+          <option>Live Journey Initiative</option>
+          <option>Safe Passage to School</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-donate" style="width:100%;border-radius:8px;">❤ Complete Donation</button>
+      <p style="text-align:center;font-size:.78rem;color:#888;margin-top:12px;">🔒 Secure &amp; Encrypted</p>
+    </form>
+  </div>
+</div>
+
+<div class="notification"></div>
+<script src="js/main.js"></script>
+</body>
+</html>

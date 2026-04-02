@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Tribeless GH Heritage LBG</title>
+  <meta name="description" content="Get in touch with Tribeless GH Heritage LBG. Office at Torgbor Close, Kanda. Call 0276060260 or email info@tribelessgh.org." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    .map-embed {
+      width: 100%; height: 360px; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow); border: none;
+      background: #e8f0e8;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--mid);
+    }
+    .map-placeholder {
+      width: 100%; height: 360px; border-radius: var(--radius);
+      background: linear-gradient(135deg, #d4e8d4, #e8f5e8);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; color: var(--primary); box-shadow: var(--shadow);
+    }
+    .map-placeholder .map-icon { font-size: 3rem; }
+    .map-placeholder p { font-size: .95rem; font-weight: 600; text-align: center; }
+    .map-placeholder span { font-size: .82rem; color: var(--mid); }
+
+    .faq-list { margin-top: 48px; }
+    .faq-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .faq-q {
+      width: 100%; text-align: left;
+      background: var(--white);
+      padding: 18px 22px;
+      border: none; cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: .97rem; font-weight: 600;
+      color: var(--dark);
+      display: flex; justify-content: space-between; align-items: center;
+      transition: background var(--transition);
+    }
+    .faq-q:hover { background: var(--light); }
+    .faq-q.open { background: var(--primary); color: var(--white); }
+    .faq-q .arrow { transition: transform var(--transition); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a {
+      background: var(--white);
+      padding: 0 22px;
+      max-height: 0; overflow: hidden;
+      transition: max-height .4s ease, padding .3s ease;
+      color: var(--mid); font-size: .93rem;
+    }
+    .faq-a.open { max-height: 300px; padding: 16px 22px 20px; }
+
+    .partner-logos {
+      display: flex; flex-wrap: wrap; gap: 20px; margin-top: 40px; justify-content: center;
+    }
+    .partner-logo {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 16px 28px;
+      box-shadow: var(--shadow);
+      font-weight: 700;
+      color: var(--mid);
+      font-size: .9rem;
+      display: flex; align-items: center; gap: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─────────────────────────────── -->
+<nav class="navbar scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=80&h=80&fit=crop&crop=center&q=80" alt="Logo" />
+      <div class="nav-logo-text">
+        <strong>Tribeless GH Heritage</strong>
+        <span>LBG · Building Resilient Communities</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="initiatives.html">Initiatives</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li class="nav-donate-btn"><a href="#" data-donate class="btn btn-donate">❤ Donate</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─────────────────────────────── -->
+<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1600&q=80');background-size:cover;background-position:center;position:relative;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,71,42,.88),rgba(18,25,43,.75));"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Contact</div>
+    <h1>Get In Touch</h1>
+    <p>We'd love to hear from you — whether you're a partner, volunteer, donor, or community member.</p>
+  </div>
+</div>
+
+<!-- ─── CONTACT MAIN ──────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>Reach Us Directly</h3>
+
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Office Address</strong>
+            <span>Tribeless Home, Torgbor Close, Kanda, Accra</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🗺️</div>
+          <div class="contact-item-text">
+            <strong>Digital Address</strong>
+            <span>GA041-9996</span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div class="contact-item-text">
+            <strong>Telephone</strong>
+            <span>
+              <a href="tel:0276060260" style="color:var(--primary);">0276 060 260</a> /
+              <a href="tel:0552081911" style="color:var(--primary);">0552 081 911</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:info@tribelessgh.org" style="color:var(--primary);">info@tribelessgh.org</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-item-text">
+            <strong>Office Hours</strong>
+            <span>Monday – Friday: 8:00am – 5:00pm</span>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="map-placeholder" style="margin-top:30px;">
+          <div class="map-icon">📍</div>
+          <p>Tribeless Home<br>Torgbor Close, Kanda, Accra</p>
+          <span>Digital Address: GA041-9996</span>
+          <a href="https://maps.google.com/?q=Kanda,Accra,Ghana" target="_blank" rel="noopener"
+             class="btn btn-primary" style="margin-top:10px;font-size:.85rem;">Open in Google Maps</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3 style="margin-bottom:24px;">Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name *</label>
+              <input type="text" placeholder="Kwame" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name *</label>
+              <input type="text" placeholder="Asante" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="0XX XXX XXXX" />
+          </div>
+          <div class="form-group">
+            <label>Subject *</label>
+            <select required>
+              <option value="">— Select a Subject —</option>
+              <option>General Enquiry</option>
+              <option>Partnership Opportunity</option>
+              <option>Donation / Funding</option>
+              <option>Volunteer</option>
+              <option>Beyond the Blanket / MindNest</option>
+              <option>Hospital Assets Recovery (HARI)</option>
+              <option>Books Reborn</option>
+              <option>Live Journey Initiative</option>
+              <option>Safe Passage to School</option>
+              <option>Media / Press</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message *</label>
+            <textarea placeholder="Tell us how we can help or how you'd like to get involved..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;border-radius:8px;">
+            Send Message →
+          </button>
+          <p style="text-align:center;font-size:.78rem;color:#999;margin-top:10px;">
+            We typically respond within 2 business days.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ───────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-badge">Common Questions</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item">
+        <button class="faq-q">How can I donate to Tribeless GH Heritage? <span class="arrow">▼</span></button>
+        <div class="faq-a">You can donate directly through the donation button on our website. We accept various payment methods. For large donations or corporate giving, please contact us directly at info@tribelessgh.org.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I volunteer with your organisation? <span class="arrow">▼</span></button>
+        <div class="faq-a">Yes! We welcome volunteers with skills in health, education, communications, technology, fundraising, and community mobilisation. Please fill in the contact form selecting "Volunteer" as the subject.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How can my organisation partner with Tribeless? <span class="arrow">▼</span></button>
+        <div class="faq-a">We actively seek partnerships with government institutions, development organisations, NGOs, corporate entities, and community groups. Contact us with "Partnership Opportunity" as the subject to begin a conversation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How are donations used? <span class="arrow">▼</span></button>
+        <div class="faq-a">All donations go directly to funding our five community initiatives: MindNest mental health support, HARI hospital equipment recovery, Books Reborn, Live Journey cultural arts, and Safe Passage to School. We maintain full transparency in our financial reporting.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I donate books or other materials? <span class="arrow">▼</span></button>
+        <div class="faq-a">Absolutely! Books Reborn accepts donations of used textbooks and reading materials. Contact us to arrange a drop-off or pick-up. We also accept medical equipment donations for the HARI initiative and life jackets for the Safe Passage project.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is Tribeless GH Heritage a registered organisation? <span class="arrow">▼</span></button>
+        <div class="faq-a">Yes. Tribeless GH Heritage is a registered Limited by Guarantee (LBG) organisation in Ghana, operating as a non-profit entity dedicated to community development.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PARTNER WITH US ───────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-badge">Collaborate</span>
+      <h2 class="section-title">Partner With Us</h2>
+      <p class="section-sub">We work with government agencies, development partners, civil society, and private sector to achieve lasting impact at scale.</p>
+    </div>
+    <div class="why-grid" style="margin-top:40px;">
+      <div class="why-card">
+        <div class="why-icon">🏛️</div>
+        <h3>Government Partners</h3>
+        <p>We align with national development priorities and collaborate with NHIS, GES, Ministry of Health, and local government authorities.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌐</div>
+        <h3>Development Organisations</h3>
+        <p>We partner with international NGOs, UN agencies, and development finance institutions to scale our community impact.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏢</div>
+        <h3>Corporate Partners</h3>
+        <p>Corporate social responsibility partnerships help fund our initiatives while connecting businesses to meaningful community impact.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">👥</div>
+        <h3>Community Groups</h3>
+        <p>We work with faith communities, women's groups, youth associations, and traditional leaders to co-design and implement programmes.</p>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:36px;">
+      <a href="mailto:info@tribelessgh.org" class="btn btn-primary">Partner With Us Today</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DONATE CTA ────────────────────────────── -->
+<section class="donate-section">
+  <div class="container">
+    <h2>Ready to Make a Difference?</h2>
+    <p>Every contribution — however large or small — helps build healthier, more resilient communities across Ghana.</p>
+    <a href="#" data-donate class="btn btn-donate" style="font-size:1.1rem;padding:16px 40px;">❤ Donate Now</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=60&h=60&fit=crop&crop=center&q=80" alt="Logo" style="height:38px;width:38px;border-radius:6px;" />
+          <div class="nav-logo-text"><strong>Tribeless GH Heritage</strong><span>LBG</span></div>
+        </a>
+        <p>Building healthy, resilient, and self-reliant communities across Ghana and Africa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="story.html">Founder's Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Initiatives</h4>
+        <ul class="footer-links">
+          <li><a href="initiatives.html#mindnest">Beyond the Blanket</a></li>
+          <li><a href="initiatives.html#hari">HARI</a></li>
+          <li><a href="initiatives.html#books">Books Reborn</a></li>
+          <li><a href="initiatives.html#livejourney">Live Journey</a></li>
+          <li><a href="initiatives.html#safepassage">Safe Passage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:0276060260">0276 060 260</a></li>
+          <li><a href="tel:0552081911">0552 081 911</a></li>
+          <li><a href="mailto:info@tribelessgh.org">info@tribelessgh.org</a></li>
+          <li><a href="#">Torgbor Close, Kanda</a></li>
+          <li><a href="#">GA041-9996</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tribeless GH Heritage LBG. All rights reserved.</span>
+      <span>Tribeless Home, Torgbor Close, Kanda · GA041-9996</span>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-donate">
+  <span class="floating-donate-label">Support Our Mission</span>
+  <a href="#" data-donate class="floating-donate-btn">❤ Donate</a>
+</div>
+
+<div class="modal-overlay" id="donateOverlay">
+  <div class="modal" id="donateModal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h2>Make a Donation</h2>
+    <p>Support Tribeless GH Heritage LBG in building healthy, self-reliant communities across Ghana.</p>
+    <form id="donateForm">
+      <div class="donate-amounts" style="margin-bottom:20px;">
+        <button type="button" class="donate-amt" data-amount="20">GHS 20</button>
+        <button type="button" class="donate-amt active" data-amount="50">GHS 50</button>
+        <button type="button" class="donate-amt" data-amount="100">GHS 100</button>
+        <button type="button" class="donate-amt" data-amount="250">GHS 250</button>
+      </div>
+      <div class="form-group"><label>Amount (GHS)</label><input type="number" value="50" min="1" required /></div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" required /></div>
+        <div class="form-group"><label>Last Name</label><input type="text" required /></div>
+      </div>
+      <div class="form-group"><label>Email Address</label><input type="email" required /></div>
+      <div class="form-group">
+        <label>Dedicated to</label>
+        <select>
+          <option>General Fund</option>
+          <option>Beyond the Blanket / MindNest</option>
+          <option>Hospital Assets Recovery (HARI)</option>
+          <option>Books Reborn</option>
+          <option>Live Journey Initiative</option>
+          <option>Safe Passage to School</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-donate" style="width:100%;border-radius:8px;">❤ Complete Donation</button>
+      <p style="text-align:center;font-size:.78rem;color:#888;margin-top:12px;">🔒 Secure &amp; Encrypted</p>
+    </form>
+  </div>
+</div>
+
+<div class="notification"></div>
+<script src="js/main.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const answer = this.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-q').forEach(b => b.classList.remove('open'));
+      if (!isOpen) {
+        answer.classList.add('open');
+        this.classList.add('open');
+      }
+    });
+  });
+</script>
+</body>
+</html>

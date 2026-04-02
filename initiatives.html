@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initiatives — Tribeless GH Heritage LBG</title>
+  <meta name="description" content="Explore Tribeless GH Heritage's five community initiatives: MindNest, HARI, Books Reborn, Live Journey, and Safe Passage to School." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+  <style>
+    .initiative-section {
+      padding: 90px 0;
+      scroll-margin-top: 80px;
+    }
+    .initiative-section:nth-child(even) {
+      background: var(--light);
+    }
+    .init-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .init-inner.rev { direction: rtl; }
+    .init-inner.rev > * { direction: ltr; }
+    .init-image {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      width: 100%; height: 420px; object-fit: cover;
+    }
+    .init-body .section-badge { margin-bottom: 10px; }
+    .init-body h2 { font-size: clamp(1.6rem,3.5vw,2.2rem); margin-bottom: 16px; }
+    .init-body p  { color: var(--mid); margin-bottom: 14px; font-size: .97rem; }
+    .init-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .init-tag {
+      padding: 5px 14px;
+      background: rgba(30,107,58,.08);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+    .init-impact {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      border-left: 4px solid var(--primary);
+    }
+    .init-impact strong { display: block; font-size: .82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); margin-bottom: 6px; }
+    .init-impact p { margin: 0; font-size: .9rem; color: var(--mid); }
+    .all-initiatives-nav {
+      background: var(--dark);
+      padding: 18px 0;
+      position: sticky; top: 72px; z-index: 500;
+    }
+    .all-initiatives-nav ul {
+      display: flex; gap: 6px; list-style: none;
+      justify-content: center; flex-wrap: wrap;
+    }
+    .all-initiatives-nav a {
+      color: rgba(255,255,255,.7);
+      font-size: .83rem;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: 50px;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .all-initiatives-nav a:hover { background: var(--primary); color: var(--white); }
+    @media (max-width: 800px) {
+      .init-inner, .init-inner.rev { grid-template-columns: 1fr; direction: ltr; }
+      .init-image { height: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─────────────────────────────── -->
+<nav class="navbar scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=80&h=80&fit=crop&crop=center&q=80" alt="Logo" />
+      <div class="nav-logo-text">
+        <strong>Tribeless GH Heritage</strong>
+        <span>LBG · Building Resilient Communities</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="initiatives.html" class="active">Initiatives</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="nav-donate-btn"><a href="#" data-donate class="btn btn-donate">❤ Donate</a></li>
+    </ul>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- ─── PAGE HERO ─────────────────────────────── -->
+<div class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80');background-size:cover;background-position:center;position:relative;">
+  <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,71,42,.88),rgba(18,25,43,.75));"></div>
+  <div style="position:relative;z-index:1;">
+    <div class="breadcrumb"><a href="index.html">Home</a> › Initiatives</div>
+    <h1>Our Initiatives</h1>
+    <p>Five community-driven programmes addressing Ghana's most pressing development challenges — from mental health to boat safety for schoolchildren.</p>
+  </div>
+</div>
+
+<!-- ─── STICKY NAV ────────────────────────────── -->
+<div class="all-initiatives-nav">
+  <ul>
+    <li><a href="#mindnest">🧠 Beyond the Blanket / MindNest</a></li>
+    <li><a href="#hari">🏥 HARI</a></li>
+    <li><a href="#books">📚 Books Reborn</a></li>
+    <li><a href="#livejourney">🎭 Live Journey</a></li>
+    <li><a href="#safepassage">🚤 Safe Passage</a></li>
+  </ul>
+</div>
+
+<!-- ─── 1. MINDNEST ───────────────────────────── -->
+<section class="initiative-section" id="mindnest">
+  <div class="container">
+    <div class="init-inner">
+      <img class="init-image"
+           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&q=80&fit=crop"
+           alt="Mental health support and wellness" />
+      <div class="init-body">
+        <span class="section-badge">Mental Health</span>
+        <h2>Beyond the Blanket / MindNest</h2>
+        <div class="init-tags">
+          <span class="init-tag">Digital Health</span>
+          <span class="init-tag">Mental Wellness</span>
+          <span class="init-tag">Early Intervention</span>
+          <span class="init-tag">Stigma Reduction</span>
+        </div>
+        <p>Beyond the Blanket / MindNest addresses Ghana's growing mental health challenges by promoting early intervention, reducing stigma, and improving access to care through digital platforms including the MindNest App.</p>
+        <p>The initiative supports students, pregnant and postpartum women, survivors of abuse and trauma, prison inmates, and underserved communities — particularly in deprived areas where professional mental health services are virtually non-existent.</p>
+        <p>Through community-based outreach, peer support networks, and digital tools, MindNest empowers individuals to seek help earlier, understand their mental health, and access appropriate care — before crises escalate.</p>
+        <div class="init-impact">
+          <strong>Who We Reach</strong>
+          <p>Students · Pregnant &amp; postpartum women · Trauma survivors · Prison inmates · Deprived communities</p>
+        </div>
+        <a href="#" data-donate class="btn btn-primary">Support This Initiative</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 2. HARI ───────────────────────────────── -->
+<section class="initiative-section" id="hari">
+  <div class="container">
+    <div class="init-inner rev">
+      <img class="init-image"
+           src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=700&q=80&fit=crop"
+           alt="Hospital equipment repair and restoration" />
+      <div class="init-body">
+        <span class="section-badge">Healthcare</span>
+        <h2>Hospital Assets Recovery Initiative (HARI)</h2>
+        <div class="init-tags">
+          <span class="init-tag">Equipment Repair</span>
+          <span class="init-tag">TVET Partnership</span>
+          <span class="init-tag">Youth Employment</span>
+          <span class="init-tag">Maternal Health</span>
+        </div>
+        <p>HARI addresses the pervasive problem of non-functional hospital equipment. Across Ghana, essential medical equipment — beds, monitors, and diagnostic tools — sits broken and unused while patients suffer.</p>
+        <p>The initiative works with TVET institutions, artisans, and apprentices to repair and restore medical equipment, simultaneously creating technical training and employment opportunities for young people in the health technology sector.</p>
+        <p>Restored equipment is redistributed to health facilities that need it most — improving care for mothers giving birth, newborns, and all patients in under-resourced communities.</p>
+        <div class="init-impact">
+          <strong>Double Impact</strong>
+          <p>Better patient care through functional equipment + technical skills and employment for Ghana's youth</p>
+        </div>
+        <a href="#" data-donate class="btn btn-primary">Support This Initiative</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 3. BOOKS REBORN ───────────────────────── -->
+<section class="initiative-section" id="books">
+  <div class="container">
+    <div class="init-inner">
+      <img class="init-image"
+           src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80&fit=crop"
+           alt="Books and children reading" />
+      <div class="init-body">
+        <span class="section-badge">Education</span>
+        <h2>Books Reborn</h2>
+        <div class="init-tags">
+          <span class="init-tag">Education Access</span>
+          <span class="init-tag">Book Redistribution</span>
+          <span class="init-tag">Reading Culture</span>
+          <span class="init-tag">Community Libraries</span>
+        </div>
+        <p>Books Reborn improves access to learning materials by collecting, refurbishing, and redistributing books to underserved schools and communities. For many children in rural and peri-urban areas, a textbook is still a luxury.</p>
+        <p>The initiative supports libraries, donates reading materials to schools with the greatest need, and promotes a culture of reading through community engagement programmes. Children who have books learn better — it's that simple.</p>
+        <p>Books Reborn also creates meaningful connections between urban and rural schools, fostering a spirit of solidarity and shared purpose across Ghana's educational communities.</p>
+        <div class="init-impact">
+          <strong>The Need</strong>
+          <p>Millions of children in Ghana lack access to adequate textbooks. Books Reborn closes this gap one book at a time.</p>
+        </div>
+        <a href="#" data-donate class="btn btn-primary">Support This Initiative</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4. LIVE JOURNEY ───────────────────────── -->
+<section class="initiative-section" id="livejourney">
+  <div class="container">
+    <div class="init-inner rev">
+      <img class="init-image"
+           src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=700&q=80&fit=crop"
+           alt="Youth cultural arts and performance" />
+      <div class="init-body">
+        <span class="section-badge">Culture &amp; Arts</span>
+        <h2>Live Journey Initiative</h2>
+        <div class="init-tags">
+          <span class="init-tag">Youth Engagement</span>
+          <span class="init-tag">Cultural Education</span>
+          <span class="init-tag">Creative Arts</span>
+          <span class="init-tag">Employment</span>
+        </div>
+        <p>The Live Journey Initiative promotes youth engagement through cultural education and the creative arts. In communities where formal employment is scarce, the cultural and creative industries offer a powerful and dignified pathway to livelihoods.</p>
+        <p>The initiative supports cultural facilitators — artists, performers, storytellers, and craftspeople — and creates employment opportunities that celebrate and preserve Ghana's rich cultural heritage.</p>
+        <p>By investing in culture, Live Journey simultaneously preserves identity, strengthens community bonds, and opens economic opportunities for young Ghanaians who might otherwise be left behind.</p>
+        <div class="init-impact">
+          <strong>Cultural &amp; Economic Impact</strong>
+          <p>Supporting cultural facilitators while creating sustainable employment in Ghana's creative industries</p>
+        </div>
+        <a href="#" data-donate class="btn btn-primary">Support This Initiative</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 5. SAFE PASSAGE ───────────────────────── -->
+<section class="initiative-section" id="safepassage">
+  <div class="container">
+    <div class="init-inner">
+      <img class="init-image"
+           src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=700&q=80&fit=crop"
+           alt="Children water safety and life jackets" />
+      <div class="init-body">
+        <span class="section-badge">Child Safety</span>
+        <h2>Safe Passage to School Project</h2>
+        <div class="init-tags">
+          <span class="init-tag">Life Jackets</span>
+          <span class="init-tag">Water Safety</span>
+          <span class="init-tag">Child Protection</span>
+          <span class="init-tag">Education Access</span>
+        </div>
+        <p>In water transport-dependent communities across Ghana, thousands of school children travel by boat every day just to reach school. For many, this journey carries a very real risk of drowning.</p>
+        <p>The Safe Passage to School Project provides life jackets and comprehensive water safety education to these school children, preventing drowning and improving safe access to education in high-risk communities.</p>
+        <p>Beyond equipment, the project trains teachers, parents, and local boatmen on water safety protocols — creating a community-wide culture of safety that protects children long after the project's direct intervention.</p>
+        <div class="init-impact">
+          <strong>Why It's Urgent</strong>
+          <p>Drowning is a leading cause of accidental death among children in coastal and lakeside communities. A life jacket can make the difference between life and death.</p>
+        </div>
+        <a href="#" data-donate class="btn btn-primary">Support This Initiative</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DONATE CTA ────────────────────────────── -->
+<section class="donate-section">
+  <div class="container">
+    <h2>Fund the Change You Want to See</h2>
+    <p>Choose an initiative to support or contribute to our general fund — every contribution creates real, lasting impact in Ghanaian communities.</p>
+    <div class="donate-amounts">
+      <button class="donate-amt" data-amount="20">GHS 20</button>
+      <button class="donate-amt active" data-amount="50">GHS 50</button>
+      <button class="donate-amt" data-amount="100">GHS 100</button>
+      <button class="donate-amt" data-amount="250">GHS 250</button>
+      <button class="donate-amt" data-amount="500">GHS 500</button>
+    </div>
+    <a href="#" data-donate class="btn btn-donate" style="font-size:1.1rem;padding:16px 40px;">❤ Donate Now</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=60&h=60&fit=crop&crop=center&q=80" alt="Logo" style="height:38px;width:38px;border-radius:6px;" />
+          <div class="nav-logo-text"><strong>Tribeless GH Heritage</strong><span>LBG</span></div>
+        </a>
+        <p>Building healthy, resilient, and self-reliant communities across Ghana and Africa.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn">f</a>
+          <a href="#" class="social-btn">𝕏</a>
+          <a href="#" class="social-btn">📷</a>
+          <a href="#" class="social-btn">in</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="initiatives.html">Initiatives</a></li>
+          <li><a href="story.html">Founder's Story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Initiatives</h4>
+        <ul class="footer-links">
+          <li><a href="#mindnest">Beyond the Blanket</a></li>
+          <li><a href="#hari">HARI</a></li>
+          <li><a href="#books">Books Reborn</a></li>
+          <li><a href="#livejourney">Live Journey</a></li>
+          <li><a href="#safepassage">Safe Passage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-links">
+          <li><a href="tel:0276060260">0276 060 260</a></li>
+          <li><a href="tel:0552081911">0552 081 911</a></li>
+          <li><a href="mailto:info@tribelessgh.org">info@tribelessgh.org</a></li>
+          <li><a href="#">Torgbor Close, Kanda</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Tribeless GH Heritage LBG. All rights reserved.</span>
+      <span>Tribeless Home, Torgbor Close, Kanda · GA041-9996</span>
+    </div>
+  </div>
+</footer>
+
+<div class="floating-donate">
+  <span class="floating-donate-label">Support Our Mission</span>
+  <a href="#" data-donate class="floating-donate-btn">❤ Donate</a>
+</div>
+
+<div class="modal-overlay" id="donateOverlay">
+  <div class="modal" id="donateModal">
+    <button class="modal-close" id="modalClose">✕</button>
+    <h2>Make a Donation</h2>
+    <p>Support Tribeless GH Heritage LBG's community initiatives across Ghana.</p>
+    <form id="donateForm">
+      <div class="donate-amounts" style="margin-bottom:20px;">
+        <button type="button" class="donate-amt" data-amount="20">GHS 20</button>
+        <button type="button" class="donate-amt active" data-amount="50">GHS 50</button>
+        <button type="button" class="donate-amt" data-amount="100">GHS 100</button>
+        <button type="button" class="donate-amt" data-amount="250">GHS 250</button>
+      </div>
+      <div class="form-group"><label>Amount (GHS)</label><input type="number" value="50" min="1" required /></div>
+      <div class="form-row">
+        <div class="form-group"><label>First Name</label><input type="text" required /></div>
+        <div class="form-group"><label>Last Name</label><input type="text" required /></div>
+      </div>
+      <div class="form-group"><label>Email Address</label><input type="email" required /></div>
+      <div class="form-group">
+        <label>Dedicated to</label>
+        <select>
+          <option>General Fund</option>
+          <option>Beyond the Blanket / MindNest</option>
+          <option>Hospital Assets Recovery (HARI)</option>
+          <option>Books Reborn</option>
+          <option>Live Journey Initiative</option>
+          <option>Safe Passage to School</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-donate" style="width:100%;border-radius:8px;">❤ Complete Donation</button>
+      <p style="text-align:center;font-size:.78rem;color:#888;margin-top:12px;">🔒 Secure &amp; Encrypted</p>
+    </form>
+  </div>
+</div>
+
+<div class="notification"></div>
+<script src="js/main.js"></script>
+</body>
+</html>
