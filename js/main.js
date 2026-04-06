@@ -133,13 +133,72 @@ document.querySelectorAll('.donate-amt').forEach(btn => {
   });
 });
 
-// ── Donate form submit ────────────────────────
+// ── Donate form submit (MTN MoMo) ─────────────
 const donateForm = document.getElementById('donateForm');
 if (donateForm) {
+  const MTN_MOMO_NUMBER = '0247302554';
+  const MTN_MERCHANT_ID = '606904';
+
+  function getDonateAmount() {
+    const amountInput =
+      donateForm.querySelector('.donate-custom-input') ||
+      donateForm.querySelector('input[type="number"]');
+    const amount = Number(amountInput ? amountInput.value : 0);
+    return Number.isFinite(amount) && amount > 0 ? amount : 0;
+  }
+
+  async function copyPaymentDetails(amount) {
+    const details = [
+      'Tribeless GH Heritage Donation',
+      `Amount: GHS ${amount.toFixed(2)}`,
+      `MTN Number: ${MTN_MOMO_NUMBER}`,
+      `Merchant ID: ${MTN_MERCHANT_ID}`,
+    ].join('\n');
+
+    if (!navigator.clipboard || !window.isSecureContext) return false;
+    try {
+      await navigator.clipboard.writeText(details);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function openMomoUssd() {
+    // On mobile devices this opens dialer with *170# pre-filled.
+    window.location.href = 'tel:*170%23';
+  }
+
   donateForm.addEventListener('submit', e => {
     e.preventDefault();
-    closeDonate();
-    showNotification('Thank you for your generous support! 💚');
+    const amount = getDonateAmount();
+    if (!amount) {
+      showNotification('Please enter a valid donation amount.');
+      return;
+    }
+
+    const submitBtn = donateForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Preparing MTN MoMo...';
+    }
+
+    copyPaymentDetails(amount).then(copied => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Pay with MTN MoMo';
+      }
+
+      closeDonate();
+
+      const message = copied
+        ? `Payment details copied. Dial *170#, choose Merchant Pay, use ID ${MTN_MERCHANT_ID}, then pay GHS ${amount.toFixed(2)}.`
+        : `Dial *170#, choose Merchant Pay, use ID ${MTN_MERCHANT_ID}, then pay GHS ${amount.toFixed(2)} to complete your donation.`;
+      showNotification(message);
+
+      // Small delay ensures toast appears before dialer navigation.
+      setTimeout(openMomoUssd, 180);
+    });
   });
 }
 
