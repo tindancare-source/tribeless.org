@@ -42,10 +42,11 @@ if (hamburger && navLinks) {
   const heroBg = document.querySelector('.hero-bg');
   if (!heroBg) return;
   const images = [
-    'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1600&q=80',
+    'images/Luna image.jpeg',
     'https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=1600&q=80',
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=80',
-    'https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=1600&q=80',
+    'images/MAdam mary.jpeg',
+    'images/culture and art image.jpeg',
+    'images/safe passage image.jpeg',
   ];
   let idx = 0;
   heroBg.style.backgroundImage = `url('${images[0]}')`;
