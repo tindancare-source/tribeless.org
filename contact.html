@@ -185,7 +185,7 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h3 style="margin-bottom:24px;">Send Us a Message</h3>
-        <form id="contactForm">
+        <form id="contactForm" action="mailto:info@tribelessgh.org" method="post" enctype="text/plain">
           <div class="form-row">
             <div class="form-group">
               <label>First Name *</label>
@@ -216,7 +216,7 @@
               <option>Hospital Assets Recovery (HARI)</option>
               <option>Books Reborn</option>
               <option>Live Journey Initiative</option>
-              <option>Safe Passage to School</option>
+              <option>Safe Passage to School Initiative</option>
               <option>Media / Press</option>
             </select>
           </div>
@@ -381,35 +381,23 @@
 <div class="modal-overlay" id="donateOverlay">
   <div class="modal" id="donateModal">
     <button class="modal-close" id="modalClose">✕</button>
-    <h2>Make a Donation</h2>
-    <p>Support Tribeless GH Heritage LBG in building healthy, self-reliant communities across Ghana.</p>
-    <form id="donateForm">
-      <div class="donate-amounts" style="margin-bottom:20px;">
-        <button type="button" class="donate-amt" data-amount="20">GHS 20</button>
-        <button type="button" class="donate-amt active" data-amount="50">GHS 50</button>
-        <button type="button" class="donate-amt" data-amount="100">GHS 100</button>
-        <button type="button" class="donate-amt" data-amount="250">GHS 250</button>
-      </div>
-      <div class="form-group"><label>Amount (GHS)</label><input type="number" value="50" min="1" required /></div>
-      <div class="form-row">
-        <div class="form-group"><label>First Name</label><input type="text" required /></div>
-        <div class="form-group"><label>Last Name</label><input type="text" required /></div>
-      </div>
-      <div class="form-group"><label>Email Address</label><input type="email" required /></div>
-      <div class="form-group">
-        <label>Dedicated to</label>
-        <select>
-          <option>General Fund</option>
-          <option>Beyond the Blanket / MindNest</option>
-          <option>Hospital Assets Recovery (HARI)</option>
-          <option>Books Reborn</option>
-          <option>Live Journey Initiative</option>
-          <option>Safe Passage to School</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-donate" style="width:100%;border-radius:8px;">Pay with MTN MoMo</button>
-      <p style="text-align:center;font-size:.78rem;color:#888;margin-top:12px;">Mobile Money: 0247302554 · Merchant ID: 606904</p>
-    </form>
+    <h2>❤ Support Our Mission</h2>
+    <p>Help build healthy communities across Ghana. Send your donation via MTN Mobile Money:</p>
+    <div style="background:linear-gradient(135deg,#1e6b3a,#14472a);border-radius:14px;padding:28px 24px;text-align:center;margin:20px 0;">
+      <div style="color:rgba(255,255,255,.75);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">MTN MoMo Number</div>
+      <div style="color:#f5a623;font-size:2rem;font-weight:800;letter-spacing:2px;">0247 302 554</div>
+      <div style="width:60px;height:2px;background:rgba(255,255,255,.2);margin:16px auto;"></div>
+      <div style="color:rgba(255,255,255,.75);font-size:.8rem;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Merchant Code</div>
+      <div style="color:#fff;font-size:1.6rem;font-weight:700;letter-spacing:3px;">606904</div>
+    </div>
+    <div style="background:#f4f7f2;border-radius:10px;padding:16px 18px;font-size:.88rem;color:#3a4a5c;line-height:1.8;">
+      <strong style="display:block;margin-bottom:6px;">How to pay via MTN MoMo:</strong>
+      1. Dial <strong>*170#</strong> → Select <strong>Transfer Money</strong><br>
+      2. Choose <strong>Merchant Pay</strong> → Enter Code <strong>606904</strong><br>
+      3. Or send directly to <strong>0247 302 554</strong><br>
+      4. Enter your amount and confirm with your PIN
+    </div>
+    <p style="text-align:center;font-size:.78rem;color:#aaa;margin-top:14px;">Thank you for your generosity. Every cedi counts. 🙏</p>
   </div>
 </div>
 
