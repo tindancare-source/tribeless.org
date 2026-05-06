@@ -203,13 +203,43 @@ if (donateForm) {
   });
 }
 
-// ── Contact form ──────────────────────────────
+// ── Contact form (via Formsubmit.co) ──────────
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
-    showNotification('Message sent! We\'ll get back to you soon.');
-    contactForm.reset();
+
+    const submitBtn = document.getElementById('contactSubmitBtn');
+    const originalText = submitBtn.textContent;
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    submitBtn.style.opacity = '0.7';
+
+    try {
+      const formData = new FormData(contactForm);
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        showNotification('✅ Message sent! We\'ll get back to you within 2 business days.');
+        contactForm.reset();
+      } else {
+        showNotification('⚠️ Something went wrong. Please try again or email us directly at info@tribelessgh.org.');
+      }
+    } catch (error) {
+      showNotification('⚠️ Network error. Please check your connection or email us at info@tribelessgh.org.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      submitBtn.style.opacity = '1';
+    }
   });
 }
 

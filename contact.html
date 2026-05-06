@@ -185,28 +185,35 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h3 style="margin-bottom:24px;">Send Us a Message</h3>
-        <form id="contactForm" action="mailto:info@tribelessgh.org" method="post" enctype="text/plain">
+        <form id="contactForm" action="https://formsubmit.co/ajax/info@tribelessgh.org" method="POST">
+          <!-- Formsubmit.co config -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Message from Tribeless GH Website">
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_honey" style="display:none">
+
           <div class="form-row">
             <div class="form-group">
               <label>First Name *</label>
-              <input type="text" placeholder="Kwame" required />
+              <input type="text" name="First Name" placeholder="Kwame" required />
             </div>
             <div class="form-group">
               <label>Last Name *</label>
-              <input type="text" placeholder="Asante" required />
+              <input type="text" name="Last Name" placeholder="Asante" required />
             </div>
           </div>
           <div class="form-group">
             <label>Email Address *</label>
-            <input type="email" placeholder="you@example.com" required />
+            <input type="email" name="Email" placeholder="you@example.com" required />
           </div>
           <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" placeholder="0XX XXX XXXX" />
+            <input type="tel" name="Phone" placeholder="0XX XXX XXXX" />
           </div>
           <div class="form-group">
             <label>Subject *</label>
-            <select required>
+            <select name="Subject" required>
               <option value="">— Select a Subject —</option>
               <option>General Enquiry</option>
               <option>Partnership Opportunity</option>
@@ -222,9 +229,9 @@
           </div>
           <div class="form-group">
             <label>Your Message *</label>
-            <textarea placeholder="Tell us how we can help or how you'd like to get involved..." required></textarea>
+            <textarea name="Message" placeholder="Tell us how we can help or how you'd like to get involved..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;border-radius:8px;">
+          <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width:100%;font-size:1rem;border-radius:8px;">
             Send Message →
           </button>
           <p style="text-align:center;font-size:.78rem;color:#999;margin-top:10px;">
